@@ -183,7 +183,7 @@ void USART1_IRQHandler(void)
 		/*当前状态为1，接收数据包数据，同时判断是否接收到了第一个包尾*/
 		else if (RxState == 1)
 		{
-			if (RxData == '\r')			//如果收到第一个包尾
+			if (RxData == '%')			//如果收到第一个包尾
 			{
 				RxState = 2;			//置下一个状态
 			}
